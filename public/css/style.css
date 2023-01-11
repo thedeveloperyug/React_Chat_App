@@ -4,7 +4,7 @@
 body {
   background-color: azure;
 }
-body .scssClass {
+.scssClass {
   background-color: rgb(228, 228, 228);
   text-align: center;
   padding: 20px 0;
