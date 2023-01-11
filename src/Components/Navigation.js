@@ -5,7 +5,7 @@ const Navigation = () => {
       <header c className="text-gray-600 body-font navbar">
         <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
           <Link to="/" className="flex title-font font-medium items-center text-gray-800 mb-4 md:mb-0">
-            <img src="/images/logotcf.png" alt="tcflogo" className="w-16" />
+            <img src="./images/logotcf.png" alt="tcflogo" className="w-16" />
             <span className="ml-3 text-2xl font-semibold font-Poppins text-blue-900">thecodersfactory</span>
           </Link>
           <nav className="md:ml-auto md:mr-auto font-Poppins text-zinc flex flex-wrap text-xl text-center items-center font-bold justify-center space-x-4">
