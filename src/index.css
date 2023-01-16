@@ -16,9 +16,10 @@ body {
   .navbar{
     position:fixed;
     width: 100%;
+    z-index: 40;
+    top: 0px;
     border-radius: 0px 0px 10px 10px;
-    top:0;
     background-color: rgba(240, 255, 255,0.5);
     -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(10px);
   }
