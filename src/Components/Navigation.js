@@ -15,6 +15,7 @@ const Navigation = () => {
             <Link to="/discuss" className="hover:text-gray-900 uppercase ">Discussions</Link>
             <Link to="/developers" className="hover:text-gray-900 uppercase ">Developers</Link>
             <Link to="/about" className="hover:text-gray-900 uppercase ">About</Link>
+            <Link to="/ChatSys" className="hover:text-gray-900 uppercase ">Chat</Link>
 
           </nav>
           <Link to="/" className="flex">

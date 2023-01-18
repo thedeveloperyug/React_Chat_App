@@ -23,3 +23,21 @@ body {
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
   }
+
+  .chatContainer{
+    background-color: #a7bcff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .chatBox{
+    overflow: hidden;
+    margin-top: 100px;
+    border: 2px white solid;
+    border-radius: 10px;
+    height: 80%;
+    width: 65%;
+    display: flex;
+  }

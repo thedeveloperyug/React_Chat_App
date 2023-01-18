@@ -6,6 +6,7 @@ import Learn from './Pages/Learn';
 import Discuss from './Pages/Discuss'
 import Developers from './Pages/Developers';
 import Register from './Pages/Register';
+import ChatSystem from './Pages/ChatSystem';
 function App(){
     return (
     <>
@@ -18,6 +19,7 @@ function App(){
         <Route exact path="/developers" element={<Developers/>} />
         <Route exact path="/about" element={<About/>} />
         <Route exact path="/register" element={<Register/>} />
+        <Route exact path="/chatSys" element={<ChatSystem/>} />
         </Routes>
     </Router>
     </>
