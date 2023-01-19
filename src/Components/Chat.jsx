@@ -5,7 +5,7 @@ import Input from './Input'
 
 const Chat = () => {
   return (
-    <div className='w-2/3 bg-gray-300'>
+    <div style={{height:"100px"}} className='w-2/3  bg-gray-300'>
       <div className="chatinfo bg-gray-200 grid grid-cols-2  place-content-arround px-4 h-20">
         <div className='flex items-center space-x-3'>
           <img src={userimg} className='w-16 h-16 rounded-full ' alt="" srcset="" />
@@ -19,8 +19,10 @@ const Chat = () => {
           </div>
         </div>
       </div>
-        <Messages/>
-        <Input/>
+   
+      <Messages />
+    
+      <Input />
     </div>
   )
 }

@@ -3,13 +3,14 @@ import Message from './Message'
 
 const Messages = () => {
   return (
-    <div className='messages'>
+    <div style={{height:"448px"}} className='messages overflow-y-scroll ' >
       <Message/>
       <Message/>
       <Message/>
       <Message/>
       <Message/>
-      
+      <Message/>
+      <Message/>
     </div>
   )
 }
