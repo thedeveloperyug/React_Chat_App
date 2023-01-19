@@ -2,7 +2,7 @@ import React from 'react'
 import userimg from "../userImages/user1.jpg"
 const Message = () => {
   return (
-    <div className='bg-slate-200 flex  w-full'>
+    <div className='bg-slate-200 flex  w-full msg owner'>
       <div className='messageInfo px-2  '>
         <img src={userimg} className='w-12 rounded-full' alt="" />
         <span className='text-xs text-gray-600'>just now</span>
