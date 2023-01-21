@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 
 const Register = () => {
@@ -5,6 +6,38 @@ const Register = () => {
         <div className='formContainer'>
             <section className="text-gray-600 bg-slate-300 max-h-max h-screen body-font">
                 <form action="/">
+=======
+import React from 'react';
+// import { createUserWithEmailAndPassword } from "firebase/auth";
+// import { auth } from "../firebase";
+
+const Register = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        const name = e.target[0].value;
+        const email = e.target[1].value;
+        const password = e.target[2].value;
+        console.log(name);
+        const file = e.target[3].files[0];
+
+    // createUserWithEmailAndPassword(auth, email, password)
+    //         .then((userCredential) => {
+    //             // Signed in 
+    //             const user = userCredential.user;
+    //             // ...
+    //         })
+    //         .catch((error) => {
+    //             const errorCode = error.code;
+    //             const errorMessage = error.message;
+    //             // ..
+    //         });
+
+    }
+    return (
+        <div className='formContainer'>
+            <section className="text-gray-600 bg-slate-300 max-h-max h-screen body-font">
+                <form onSubmit={handleSubmit}>
+>>>>>>> master
                     <div className="container lg:px-40 sm:px-20 py-32 sm:my-10 mx-auto flex flex-wrap items-center">
                         <div className="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0">
                             <h1 className="title-font font-medium text-3xl text-gray-900">Slow-carb next level shoindcgoitch ethical authentic, poko scenester</h1>
@@ -34,7 +67,11 @@ const Register = () => {
                                     hover:file:bg-violet-200
                                     "/>
                             </div>
+<<<<<<< HEAD
                             <button type='sumbit' className="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Register</button>
+=======
+                            {/* <input type='submit' className="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Register</input> */}
+>>>>>>> master
                             {/* <p className="text-xs text-gray-500 mt-3">Literally you probably haven't heard of them jean shorts.</p> */}
                         </div>
                     </div>
