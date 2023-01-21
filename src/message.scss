@@ -1,0 +1,11 @@
+.msg{  
+    &.owner{
+        flex-direction: row-reverse;
+        .messageContent{
+            p{
+                color:white;
+                background-color: darkgray;
+            }
+        }
+    }
+}
