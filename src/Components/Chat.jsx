@@ -1,15 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import userimg from '../userImages/user1.jpg'
 import Messages from './Messages'
 import Input from './Input'
+import { AuthContext } from '../context/AuthContext';
 
 const Chat = () => {
+  const currentUser = useContext(AuthContext);
   return (
     <div style={{height:"100px"}} className='w-2/3  bg-gray-300'>
       <div className="chatinfo bg-gray-200 grid grid-cols-2  place-content-arround px-4 h-20">
         <div className='flex items-center space-x-3'>
-          <img src={userimg} className='w-16 h-16 rounded-full ' alt="" srcset="" />
-          <span className='text-lg font-Poppins text-gray-700 font-semibold'>Jhon</span>
+          <img src={currentUser.photoURL} className='w-16 h-16 rounded-full ' alt="" srcset="" />
+          <span className='text-lg font-Poppins text-gray-700 font-semibold'>{currentUser.displayName}</span>
         </div>
         <div className="chaticon flex items-center space-x-2 justify-end">
           <div className='cursor-pointer'><svg className='h-8' viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M170.666667 256h469.333333c46.933333 0 85.333333 38.4 85.333333 85.333333v341.333334c0 46.933333-38.4 85.333333-85.333333 85.333333H170.666667c-46.933333 0-85.333333-38.4-85.333334-85.333333V341.333333c0-46.933333 38.4-85.333333 85.333334-85.333333z" fill="#934fab"></path><path d="M938.666667 746.666667l-213.333334-128V405.333333l213.333334-128z" fill="#40376d"></path></g></svg>

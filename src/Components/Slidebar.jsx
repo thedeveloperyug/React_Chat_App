@@ -3,6 +3,7 @@ import Navbar from './Navbar'
 import Search from './Search'
 import Chats from './Chats'
 
+
 const Slidebar = () => {
     return (
         <>
