@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
 import { auth } from "../firebase";
 import { useContext } from 'react';
-// import usersvg from "../userImages/user.svg"
+import usersvg from "../userImages/user.svg"
 import { signOut } from 'firebase/auth';
 
 const Navigation = () => {
@@ -27,11 +27,11 @@ const Navigation = () => {
           </nav>
           <div className="flex items-center">
             <div className='flex items-center font-Poppins justify-center'>
-              <img src={(!currentUser) ? "usersvg" : currentUser.photoURL} className='w-10 h-10 rounded-full ' alt="usersvg" srcset="" />
+              <img src={(!currentUser) ? usersvg : currentUser.photoURL} className='w-10 h-10 rounded-full ' alt="usersvg" srcset="" />
 
             </div>
             <div className='flex items-center font-Poppins'>
-              <Link to="/login" className="items-center text-orange-800 font-bold font-Poppins border-0 py-1 px-3 focus:outline-none hover:text-orange-900 rounded-lg text-xl mt-4 md:mt-0">{(!currentUser) ? " Log In " : currentUser.displayName}</Link>
+              <Link to={(!currentUser) ? "/login" : "/chatsys"} className="items-center text-orange-800 font-bold font-Poppins border-0 py-1 px-3 focus:outline-none hover:text-orange-900 rounded-lg text-xl mt-4 md:mt-0">{(!currentUser) ? " Log In " : currentUser.displayName }</Link>
               <button onClick={()=>signOut(auth) } className="items-center text-zinc-900 font-bold font-Poppins border-0 py-1 px-3 focus:outline-none hover:text-orange-900 rounded-lg text-xl mt-4 md:mt-0">{(currentUser) ? "Log out" : ""}</button>
 
               <Link to="/register" className="items-center text-zinc-900 font-bold font-Poppins border-0 py-1 px-3 focus:outline-none hover:text-orange-900 rounded-lg text-xl mt-4 md:mt-0">{(!currentUser) ? " Register " : ""}</Link>  

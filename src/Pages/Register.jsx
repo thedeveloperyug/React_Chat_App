@@ -44,7 +44,7 @@ const Register = () => {
                             email,
                             photoURL: downloadURL
                         });
-                        navigate("/chatsys")
+                        navigate("/login")
                         await setDoc(doc(db, "userChats", res.user.uid), {
                             uid: res.user.uid,
                             displayName,
