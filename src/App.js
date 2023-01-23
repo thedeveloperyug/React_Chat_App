@@ -9,7 +9,7 @@ import Register from './Pages/Register';
 import Login from './Pages/Login';
 import ChatSystem from './Pages/ChatSystem';
 import { useContext } from 'react';
-import { AuthContext, useAuth } from './context/AuthContext';
+import { AuthContext} from './context/AuthContext';
 import  {Navigate} from 'react-router-dom'
 function App() {
     const currentUser = useContext(AuthContext)
