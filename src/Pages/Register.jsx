@@ -38,19 +38,14 @@ const Register = () => {
                             displayName,
                             photoURL: downloadURL,
                         });
-                        await setDoc(doc(db, "user", res.user.uid), {
+                        await setDoc(doc(db, "users", res.user.uid), {
                             uid: res.user.uid,
                             displayName,
                             email,
                             photoURL: downloadURL
                         });
                         navigate("/login")
-                        await setDoc(doc(db, "userChats", res.user.uid), {
-                            uid: res.user.uid,
-                            displayName,
-                            email,
-                            photoURL: downloadURL
-                        });
+                        await setDoc(doc(db, "userChats", res.user.uid), {});
                     });
                 }
             );

@@ -6,7 +6,7 @@ import usersvg from "../userImages/user.svg"
 import { signOut } from 'firebase/auth';
 
 const Navigation = () => {
-  const currentUser = useContext(AuthContext);
+  const {currentUser} = useContext(AuthContext);
   return (
     <>
 

@@ -12,13 +12,13 @@ import { useContext } from 'react';
 import { AuthContext} from './context/AuthContext';
 import  {Navigate} from 'react-router-dom'
 function App() {
-    const currentUser = useContext(AuthContext)
+    const {currentUser} = useContext(AuthContext)
     // console.log(currentUser);
 //  const currentUser = useAuth();
     // console.log(currentUser.email);
     const ProtectedRoute = ({ children }) => {
         if (!currentUser) {
-            return <Navigate to="/register" />
+            return <Navigate to="/login" />
         }
         return children;
     }
@@ -40,9 +40,7 @@ function App() {
                             <ChatSystem />
                         </ProtectedRoute>
                     } />
-
                 </Routes>
-            
             </BrowserRouter>
         </>
     )

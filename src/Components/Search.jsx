@@ -10,9 +10,9 @@ const Search = () => {
     const [username, setUsername] = useState("")
     const [user, setUser] = useState(null);
     const [err, setErr] = useState(false);
-    const currentUser = useContext(AuthContext)
+    const {currentUser} = useContext(AuthContext)
     const handleSearch = async () => {
-        const q = query(collection(db, "user"),
+        const q = query(collection(db, "users"),
             where("displayName", "==", username));
         //  console.log(displayName);
         try {
@@ -33,19 +33,19 @@ const Search = () => {
             ? currentUser.uid + user.uid
             : user.uid + currentUser.uid;
             try {
-                const res = await getDoc(doc(db, "chats", combinedId))
+                const res = await getDoc(doc(db, "chats", combinedId));
                 if(!res.exists()){
                     // create a chat in chats collection
                     await setDoc(doc(db,"chats",combinedId),{ messages:[] });
                    
 
                     await updateDoc(doc(db,"userChats",currentUser.uid),{
-                        [combinedId+ ".userInfo"]:{
+                        [combinedId+ ".userInfo"]: {
                             uid:user.uid,
                             displayName:user.displayName,
                             photoURL:user.photoURL
                         },
-                        [combinedId + ".date"]:serverTimestamp()
+                        [combinedId + ".date"]:serverTimestamp(),
                     });
                     await updateDoc(doc(db,"userChats",user.uid),{
                         [combinedId+ ".userInfo"]:{
