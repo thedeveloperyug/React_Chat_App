@@ -8,7 +8,7 @@ const Chat = () => {
 
   const {data} = useContext(ChatContext)
   return (
-    <div style={{height:"100px"}} className='w-2/3  bg-gray-300'>
+    <div style={{height:"100px"}} className='w-2/3  bg-transparent'>
       <div className="chatinfo bg-gray-200 grid grid-cols-2  place-content-arround px-4 h-20">
         <div className='flex items-center space-x-3'>
           <img src={data.user?.photoURL} className='w-12 h-12 rounded-full ' alt="" srcset="" />

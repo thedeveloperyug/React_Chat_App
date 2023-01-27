@@ -15,14 +15,15 @@ const ChatSystem = () => {
         return children;
     }
     return (
-      
+
+            <div className=' '><p className='absolute -top-2 py-24 text-center left-1/2 right-0 left-0 justify-center font-Poppins font-semibold leading-8 text-lg text-sky-900'>Chat Admin - <span className='border-2 px-2 border-gray-500 rounded-xl '> thedeveloperyug</span></p>
         <div className='chatContainer'>
             <div className="chatBox">
                 <Slidebar/>
                 <Chat/>
             </div>
         </div>
-        
+        </div>
     )
 }
 
